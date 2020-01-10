@@ -1,3 +1,8 @@
+h2{
+  color: blue;
+  text-align: right;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -84,6 +89,8 @@ body {
 
   div{
      margin: 5px;
+     
+     
   }
 
   span{
@@ -94,4 +101,5 @@ body {
   button{
    align-content: center;
    font-size: 50px;
+   color:blue;
   }

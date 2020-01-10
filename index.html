@@ -20,6 +20,9 @@
     />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <title>Daily Planner</title>
     
   </head>
@@ -41,83 +44,103 @@
     
       <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"data-time-type = "9:00 a.m.">9:00 a.m.</span>
+            <span class="input-group-text">09:00 a.m.</span>
           </div>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
-          <button>save</button>
+          <textarea id="9" class="form-control text" aria-label="With textarea"></textarea>
+          <button data-id="9" class="saveBtn">save</button>
         </div>
 
         <div class="input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text"data-time-type = "10:00 a.m.">10:00 a.m.</span>
+              <span class="input-group-text">10:00 a.m.</span>
             </div>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-            <button>save</button>
+            <textarea id="10" class="form-control text" aria-label="With textarea"></textarea>
+            <button data-id="10" class="saveBtn">save</button>
           </div>
   
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text"data-time-type = "11:00 a.m.">11:00 a.m.</span>
+                <span class="input-group-text">11:00 a.m.</span>
               </div>
-              <textarea class="form-control" aria-label="With textarea"></textarea>
-              <button>save</button>
+              <textarea id="11" class="form-control text" aria-label="With textarea"></textarea>
+              <button data-id="11" class="saveBtn">save</button>
             </div>
     
             <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"data-time-type = "12:00 p.m.">12:00 p.m.</span>
+                  <span class="input-group-text">12:00 p.m.</span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-                <button>save</button>
+                <textarea id="12" class="form-control text" aria-label="With textarea"></textarea>
+                <button data-id="12" class="saveBtn">save</button>
               </div>
       
               <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"data-time-type = "1:00 p.m.">1:00 p.m.</span>
+                    <span class="input-group-text">01:00 p.m.</span>
                   </div>
-                  <textarea class="form-control" aria-label="With textarea"></textarea>
-                  <button>save</button>
+                  <textarea id="13" class="form-control text" aria-label="With textarea"></textarea>
+                  <button data-id="13" class="saveBtn">save</button>
                 </div>
         
                 <div class="input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"data-time-type = "2:00 p.m.">2:00 p.m.</span>
+                      <span class="input-group-text">02:00 p.m.</span>
                     </div>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                    <button>save</button>
+                    <textarea id = "14" class="form-control text" aria-label="With textarea"></textarea>
+                    <button data-id="14" class="saveBtn"> save</button>
                   </div>
           
                   <div class="input-group">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"data-time-type = "3:00 p.m.">3:00 p.m.</span>
+                        <span class="input-group-text">03:00 p.m.</span>
                       </div>
-                      <textarea class="form-control" aria-label="With textarea"></textarea>
-                      <button>save</button>
+                      <textarea id="15" class="form-control text" aria-label="With textarea"></textarea>
+                      <button data-id="15" class="saveBtn">save</button>
                     </div>
             
                     <div class="input-group">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"data-time-type = "4:00 p.m.">4:00 p.m.</span>
+                          <span class="input-group-text">04:00 p.m.</span>
                         </div>
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                        <button>save</button>
+                        <textarea id="16" class="form-control text" aria-label="With textarea"></textarea>
+                        <button data-id="16" class="saveBtn">save</button>
                       </div>
               
                       <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"data-time-type = "5:00 p.m." >5:00 p.m.</span>
+                          <div id="hour-5" class="input-group-prepend">
+                          <span class="input-group-text" >05:00 p.m.</span>
+                        </div>
+                        <textarea id='17' class="form-control text" aria-label="With textarea"></textarea>
+                        <button data-id='17' class="saveBtn">save</button>
+                        
 
-                          </div>
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                          <button>save</button>
                         </div>
 
-                       
+                      <div>
+                        <h2>©EvanStein</h2>
+                      </div>
 
+                       
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
                         
                   <script>
+                    $(".saveBtn").click(function(){
+                      var time = $(this).attr('data-id')
+                      var input = $(`#${time}`).val()
+                      console.log
+                      //var value = $(this).siblings(".text");
+                      // var time = $(this).parent().attr("id");
+                      localStorage.setItem(time, input) 
 
-                    window.localStorage.setItem("data-time-type", "9:00 a.m.") 
+
+                    })
+                    var currentHour = moment().hour())
+                    localStorage.getItem()
+
+                    console.log(moment().hour())
+
+                    //if tme and local storage mactch display  the current agenda
+                    
                   
                   </script>
 
@@ -127,7 +150,5 @@
                 
                 </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
